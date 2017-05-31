@@ -14,7 +14,7 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'StaticPagesController@home');
 Route::get('/tt', function () {
     return 'Hello World';
 });
@@ -40,3 +40,6 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 
+
+Route::get('/help', 'StaticPagesController@help');
+Route::get('/about', 'StaticPagesController@about');
